@@ -9,6 +9,7 @@ const user = require("./routes/user")
 const auth = require("./middleware/auth")
 const notFound = require("./middleware/notFound")
 const index = require("./middleware/index")
+const  cors = require("./middleware/cors")
 
 /*
 GET: Obtener recursos
@@ -19,6 +20,7 @@ DELETE: Borrar un recurso
 */
 //Se usa cuando una función se quiera usar en todas las peticiones que entra en el servidor
 // use = middleware
+app.use(cors)
 app.use(morgan("dev"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
