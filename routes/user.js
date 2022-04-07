@@ -42,7 +42,8 @@ if(user_mail && user_password){
             message: token
         });
     } else{
-        return res.status(401).json({
+        //401
+        return res.status(200).json({
             code: 401,
             message: "Usuario y/o contraseña incorrectos"
         });
