@@ -25,7 +25,7 @@ app.use(morgan("dev"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //Express trabaja de arriba hacia abajo como jerarquia
-app.get("/", index)
+app.get("/", index);
 app.use("/user", user);
 app.use(auth);
 app.use("/pokemon", pokemon);
